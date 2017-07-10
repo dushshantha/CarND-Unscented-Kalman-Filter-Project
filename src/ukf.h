@@ -30,6 +30,19 @@ public:
 
   ///* predicted sigma points matrix
   MatrixXd Xsig_pred_;
+    
+  MatrixXd Xsig_;
+    
+  // Aug
+  VectorXd x_aug_;
+  MatrixXd P_aug_;
+  
+  MatrixXd R_laser_;
+    
+  MatrixXd R_radar_;
+    
+    MatrixXd H_laser_;
+    
 
   ///* time when the state is true, in us
   long long time_us_;
@@ -66,7 +79,16 @@ public:
 
   ///* Sigma point spreading parameter
   double lambda_;
-
+    
+  long long previous_timestamp_;
+    
+  int n_z_radar_;
+    
+  // the current NIS for radar
+  double NIS_radar_;
+    
+   // the current NIS for laser
+  double NIS_laser_;
 
   /**
    * Constructor
