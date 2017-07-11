@@ -83,6 +83,7 @@ public:
   long long previous_timestamp_;
     
   int n_z_radar_;
+  int n_z_laser_;
     
   // the current NIS for radar
   double NIS_radar_;
